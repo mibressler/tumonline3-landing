@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Live</title>
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700;0,900;1,900;&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+<style>
+/*General Styles*/
+body {
+	font-family: "Karla","Helvetica", sans-serif;
+	background: #212020;
+	color:white;
+}
+h3 {
+	font-weight: 900;
+	text-transform: uppercase;
+	line-height: .5em;
+	margin-bottom: 0;
+	font-size: 20px;
+}
+/* containers */
+.grid-container {
+	margin-left: auto;
+    	margin-right: auto;
+    	max-width: 1300px;
+   /* 	padding-left: 10px;
+    	padding-right: 10px; */
+}
+.fullsize-container {
+	margin-left: auto;
+    	margin-right: auto;
+	max-width: 1800px;
+    	padding-left: 10px;
+    	padding-right: 10px;
+	display: inline-block;
+}
+
+/*YT Live*/
+.ytvidcontainer {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+}
+.ytvidcontainer iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.ytchatcontainer {
+    position: relative;
+    padding-bottom: 131.3%; 
+}
+.ytchatcontainer iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+
+/*slider*/
+* {
+  box-sizing: border-box;
+}
+
+
+a:link,
+a:hover,
+a:active,
+a:visited {
+  transition: color 150ms;
+  color: #95a5a6;
+  text-decoration: none;
+}
+a:hover {
+  color: #7f8c8d;
+  text-decoration: underline;
+}
+.contain {
+  width: 100%;
+  overflow: hidden;
+}
+.row {
+  overflow: hidden;
+  width: 100%;
+}
+.row__inner {
+  transition: 450ms -webkit-transform;
+  transition: 450ms transform;
+  transition: 450ms transform, 450ms -webkit-transform;
+  font-size: 0;
+  white-space: nowrap;
+  margin: 20px 0;
+  padding-bottom: 10px;
+}
+.tile {
+  position: relative;
+  display: inline-block;
+  width: 250px;
+  height: 140.625px;
+  margin-right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 450ms all;
+  -webkit-transform-origin: center left;
+          transform-origin: center left;
+}
+.tile__img {
+  width: 250px;
+  height: 140.625px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.tile__details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  font-size: 0px;
+  opacity: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 100%);
+  transition: 450ms opacity;
+}
+.tile__details:after,
+.tile__details:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: #000;
+}
+.tile__details:after {
+  margin-top: -25px;
+  margin-left: -25px;
+  width: 50px;
+  height: 50px;
+  border: 0px solid #ecf0f1;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 100%;
+  background: rgba(0,0,0,0);
+  z-index: 1;
+}
+.tile__details:before {
+  content: '';
+  left: 0;
+  width: 100%;
+  font-size: 30px;
+  margin-left: 7px;
+  margin-top: -18px;
+  text-align: center;
+  z-index: 2;
+}
+.tile:hover .tile__details {
+  opacity: 1;
+}
+.tile__title {
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+}
+.row__inner:hover {
+  -webkit-transform: translate3d(-62.5px, 0, 0);
+          transform: translate3d(-62.5px, 0, 0);
+}
+.row__inner:hover .tile {
+  opacity: 0.3;
+}
+.row__inner:hover .tile:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  opacity: 1;
+}
+.tile:hover ~ .tile {
+  -webkit-transform: translate3d(75px, 0, 0);
+          transform: translate3d(75px, 0, 0);
+}
+</style>
+</head>
+<body>
+<div class="grid-container">    
+<h1>Currently Offline</h1>
+</div>
+<div class="fullsize-container">
+</div>
+</body>
+</html>
