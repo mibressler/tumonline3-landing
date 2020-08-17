@@ -1,1 +1,1 @@
-# Prototype for basic Landing Page for TUMOnline 3.0 Documentation
+# Prototype for a basic landing page for TUMOnline 3.0 Documentation
